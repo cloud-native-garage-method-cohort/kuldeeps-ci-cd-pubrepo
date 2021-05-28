@@ -35,7 +35,7 @@ metadata:
   name: deployer-rb
 subjects:
   - kind: ServiceAccount
-    name: build-bot
+    name: deployer
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
