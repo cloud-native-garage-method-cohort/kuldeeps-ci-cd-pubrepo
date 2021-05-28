@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: deployer
+  name: deployer-role
 rules:
   - apiGroups:
       - apps
@@ -32,11 +32,11 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: deployer
+  name: deployer-rb
 subjects:
   - kind: ServiceAccount
     name: build-bot
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: deployer
+  name: deployer-role
